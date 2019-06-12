@@ -17,3 +17,5 @@ url: "http://yourdomain.com" # the base hostname & protocol for your sit
 
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-slate
