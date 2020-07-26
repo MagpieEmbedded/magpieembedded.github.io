@@ -398,6 +398,12 @@ pre {
   margin: 2vw;
 }
 
+@media screen and (max-height: 400px) {
+  .fixed-image-container {
+    padding-top: 10vh;
+  }
+}
+
 .tech-highlight {
   width: 100%;
   max-width: 400px;
