@@ -413,3 +413,8 @@ pre {
   width: 100%;
   margin: auto;
 }
+
+// This should be dealt with in a better way
+body {
+  overflow-x: hidden;
+}
