@@ -1,206 +1,426 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
 }
-
-
 
 /**
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  vertical-align: middle;
 }
-
-
 
 /**
  * Figures
  */
 figure > img {
-    display: block;
+  display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+  font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
  */
-ul, ol {
-    margin-left: $spacing-unit;
+ul,
+ol {
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
-    text-decoration: none;
+  color: $brand-color;
+  text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
 }
-
-
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-
-
 
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 }
-
-
 
 /**
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
-
-
 
 /**
  * Icons
  */
 .icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
+    path {
+      fill: $grey-color;
     }
+  }
+}
+
+.menu {
+  position: sticky;
+  top: 0vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  margin: auto;
+  z-index: 10;
+}
+
+.menu-bar {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: flex-start;
+  background-color: black;
+}
+
+.menu a {
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 1.5em;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+  transition: background-color ease-out 0.5s;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: black;
+  transition: background-color ease-in 0.3s;
+}
+.menu-bar a:last-child {
+  width: 100vw;
+}
+.menu-bar a:last-child:hover {
+  background-color: black;
+  color: white;
+}
+
+.menu-button {
+  display: none;
+  width: 25vw;
+  font-size: 1.5em;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-decoration: none;
+  flex-grow: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  transition: background-color ease-out 0.5s;
+}
+
+.menu-input {
+  display: none;
+}
+.menu-close {
+  display: none;
+}
+
+.title-bar {
+  height: 10vh;
+  min-height: 50px;
+  max-height: 200px;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 1vh;
+}
+
+@media screen and (max-width: 600px) {
+  .title-bar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0vh;
+  }
+
+  .menu {
+    height: 10vh;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .menu-bar {
+    height: 90vh;
+    left: 0vw;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transition: transform 0.3s ease-out;
+    transform: translateX(-120vw);
+    margin: 0;
+    z-index: 4;
+  }
+
+  .menu a {
+    flex-grow: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
+  #show-menu:checked ~ .menu-bar {
+    transform: translateX(0vh);
+    transition: transform 0.3s ease-in;
+  }
+
+  .menu-close {
+    display: block;
+    background-color: black;
+    transition: none;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .menu a {
+    width: 50vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+}
+
+.fixed-image-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: black;
+  overflow-x: hidden;
+  margin: 0;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.fixed-image-container h1 {
+  width: 90vw;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 3.5em;
+  flex-grow: 1;
+}
+
+.fixed-image-container h2 {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  width: 100%;
+  max-width: 90vw;
+}
+
+.fixed-image-container p {
+  font-family: sans-serif;
+  font-size: 1.2em;
+}
+
+.fixed-image-container a {
+  color: #f39237;
+  font-style: italic;
+}
+
+.fixed-image-container .child {
+  width: 100%;
+  max-width: 400px;
+  max-height: 600px;
+  background-color: #0461afcc;
+  color: white;
+  padding: 2vh 2vw 2vh 2vw;
+  margin: 2vw;
+}
+
+@media screen and (max-height: 400px) {
+  .fixed-image-container {
+    padding-top: 10vh;
+  }
+}
+
+.tech-highlight {
+  width: 100%;
+  max-width: 400px;
+  background-color: #0461afcc;
+  color: white;
+  padding: 2vh 2vw 2vh 2vw;
+  margin: 2vw;
+}
+
+.tech-highlight img {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  margin: auto;
+}
+
+// This should be dealt with in a better way
+body {
+  overflow-x: hidden;
 }

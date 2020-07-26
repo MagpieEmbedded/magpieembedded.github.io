@@ -1,12 +1,67 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>
+    {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape
+    }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+  />
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <style>
+    .big-container {
+      width: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: top;
+    }
+
+    .big-container h1 {
+      width: 95%;
+      font-size: 4em;
+      font-weight: bold;
+      text-align: center;
+      margin: auto;
+    }
+
+    .small-container {
+      width: 100%;
+      max-width: 700px;
+      height: 100%;
+      border: 5px solid #eeeeee;
+      background-color: #eeeeee;
+      margin: 2%;
+      color: black;
+    }
+
+    .smaller-container {
+      min-width: 200px;
+      list-style-type: disc;
+      font-size: 1.2em;
+    }
+
+    .smaller-container h1 {
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+    }
+    .small-container ul {
+      margin-right: 1%;
+    }
+  </style>
 </head>
