@@ -1,9 +1,31 @@
-<section style="width: 90%; margin: auto; background-color: #0461af;">
-    <h1 style="color: white;margin-bottom:0; margin-left:2%;margin-right:2%;padding-top: 1vh">{{include.title}}</h1>
-    <h3 style="color: #dddddd; margin-left:2%;margin-right:2%">{{ include.time | date_to_long_string }}</h3>
-    <div class="embed-container">
-        <iframe src="{{ include.link }}" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </div>
+<section
+  style="
+    width: 90%;
+    margin: auto;
+    background-color: #0461af;
+    margin-bottom: 2vh;
+  "
+>
+  <h1
+    style="
+      color: white;
+      margin-bottom: 0;
+      margin-left: 2%;
+      margin-right: 2%;
+      padding-top: 1vh;
+    "
+  >
+    {{include.title}}
+  </h1>
+  <h3 style="color: #dddddd; margin-left: 2%; margin-right: 2%">
+    {{ include.time | date_to_long_string }}
+  </h3>
+  <div class="embed-container">
+    <iframe
+      src="{{ include.link }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
 </section>
