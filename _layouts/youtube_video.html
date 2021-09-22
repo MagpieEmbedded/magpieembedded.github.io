@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div
+  style="
+    width: 100%;
+    background-color: white;
+    padding-top: 5vh;
+    background-image: url('/assets/morning.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    overflow-x: hidden;
+  "
+>
+  <div class="center-column">
+    {% include youtube_preview.html title=page.name link=page.link
+    time=page.date %}
+  </div>
+</div>

@@ -1,5 +1,4 @@
 ---
-type: blog
 layout: blog
 name: One Thousand Views
 date: 22-09-2021
