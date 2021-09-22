@@ -1,0 +1,30 @@
+<section
+  class="preview"
+  style="
+    width: 90%;
+    margin: auto;
+    background-color: #0461af;
+    margin-bottom: 2vh;
+    padding-bottom: 1vh;
+  "
+>
+  <h1
+    style="
+      color: white;
+      margin-bottom: 0;
+      margin-left: 2%;
+      margin-right: 2%;
+      padding-top: 1vh;
+    "
+  >
+    <a href="{{ include.url }}"> {{include.title}} </a>
+  </h1>
+
+  <h3 style="color: #dddddd; margin-left: 2%; margin-right: 2%">
+    {{ include.time | date_to_long_string }}
+  </h3>
+
+  <h3 style="color: white; margin-left: 2%; margin-right: 2%">
+    {{ include.preview }}
+  </h3>
+</section>

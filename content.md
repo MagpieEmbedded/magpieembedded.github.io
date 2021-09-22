@@ -7,6 +7,12 @@ published: True
 
 {% for c in site.content reversed %}
 
-{% include youtube_video.html title=c.name link=c.link time=c.date %}
+{% if c.type == "youtube_video" %}
+{% include youtube_preview.html title=c.name link=c.link time=c.date %}
+{% endif %}
+
+{% if c.type == "blog" %}
+{% include post_preview.html url=c.url title=c.name preview=c.excerpt time=c.date %}
+{% endif %}
 
 {% endfor %}

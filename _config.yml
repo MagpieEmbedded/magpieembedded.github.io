@@ -21,4 +21,5 @@ theme: minima
 port: 4001
 
 collections:
-  - content
+  content:
+    output: true
