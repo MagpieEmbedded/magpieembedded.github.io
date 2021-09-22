@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div
+  style="
+    width: 100%;
+    background-color: white;
+    padding-top: 5vh;
+    background-image: url('/assets/morning.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    overflow-x: hidden;
+  "
+>
+  <div class="center-column">
+    <section
+      class="preview"
+      style="
+        width: 90%;
+        margin: auto;
+        background-color: #0461af;
+        margin-bottom: 2vh;
+        padding-bottom: 1vh;
+      "
+    >
+      <h1
+        style="
+          color: white;
+          margin-bottom: 0;
+          margin-left: 2%;
+          margin-right: 2%;
+          padding-top: 1vh;
+        "
+      >
+        <a href="{{ include.url }}"> {{page.name}} </a>
+      </h1>
+
+      <h3 style="color: #dddddd; margin-left: 2%; margin-right: 2%">
+        {{ page.date | date_to_long_string }}<br />
+        {{ page.author }}
+      </h3>
+
+      {% if page.banner_image %}
+      <img src="{{ page.banner_image }}" alt="{{ page.banner_caption }}" />
+      {% endif %}
+      <div
+        style="
+          color: white;
+          font-size: 18px;
+          width: 95%;
+          margin: auto;
+          margin-top: 2vh;
+        "
+      >
+        {{ page.content }}
+      </div>
+    </section>
+  </div>
+</div>
