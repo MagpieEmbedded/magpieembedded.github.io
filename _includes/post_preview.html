@@ -21,10 +21,14 @@
   </h1>
 
   <h3 style="color: #dddddd; margin-left: 2%; margin-right: 2%">
-    {{ include.time | date_to_long_string }}
+    {{ include.time | date_to_long_string }}<br />
+    {{ include.author }}
+  </h3>
+  <h3 class="text" style="color: white; margin-left: 2%; margin-right: 2%">
+    {{ include.preview }}
   </h3>
 
-  <h3 style="color: white; margin-left: 2%; margin-right: 2%">
-    {{ include.preview }}
+  <h3 style="color: #eeeeee; margin-left: 2%; margin-right: 2%">
+    <a href="{{ include.url}}"><i>Read more...</i></a>
   </h3>
 </section>

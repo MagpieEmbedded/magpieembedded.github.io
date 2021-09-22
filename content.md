@@ -12,7 +12,7 @@ published: True
 {% endif %}
 
 {% if c.type == "blog" %}
-{% include post_preview.html url=c.url title=c.name preview=c.excerpt time=c.date %}
+{% include post_preview.html url=c.url title=c.name preview=c.excerpt time=c.date author=c.author %}
 {% endif %}
 
 {% endfor %}
