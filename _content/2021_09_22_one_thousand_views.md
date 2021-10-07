@@ -35,3 +35,5 @@ But that is not the case.
 **Making something real is hard**.
 And making something that involves wiring, soldering, PCB design, hardware peripherals, microcontrollers, communication buses, software and networking that interacts with the world and the people in it is really hard!
 By listening to and sharing the stories of people who have been through all of that, maybe the road will seem a little clearer for the rest of us.
+
+That was the first one thousand views - let's see how far we go!
