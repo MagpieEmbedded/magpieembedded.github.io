@@ -8,7 +8,7 @@ published: True
 {% for c in site.content reversed %}
 
 {% if c.layout == "youtube_video" %}
-{% include youtube_preview.html title=c.name link=c.link time=c.date %}
+{% include youtube_preview.html title=c.name link=c.link time=c.date url=c.url %}
 {% endif %}
 
 {% if c.layout == "blog" %}

@@ -16,7 +16,7 @@
       padding-top: 1vh;
     "
   >
-    {{include.title}}
+  <a href="{{ include.url }}"> {{include.title}} </a>
   </h1>
   <h3 style="color: #dddddd; margin-left: 2%; margin-right: 2%">
     {{ include.time | date_to_long_string }}
