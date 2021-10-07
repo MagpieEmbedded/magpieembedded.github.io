@@ -1,7 +1,7 @@
 ---
 layout: content_list
-title: Content
-permalink: /content
+title: Blog
+permalink: /blog
 published: True
 ---
 
