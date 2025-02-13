@@ -109,6 +109,7 @@ h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  text-decoration: underline;
 
   &:visited {
     color: darken($brand-color, 15%);
@@ -141,10 +142,10 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
-  border: 1px solid $grey-color-light;
+  font-size: 18px;
+  // border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  // background-color: #eef;
 }
 
 code {
@@ -242,6 +243,7 @@ pre {
   flex-grow: 1;
   text-align: center;
   color: white;
+  text-decoration: underline;
   transition: background-color ease-out 0.5s;
 }
 
